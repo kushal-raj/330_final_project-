@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Archie's Diner - Contest</title>
+<link href="styles/main.css" rel="stylesheet" />
+<link href="styles/contest.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="header_wrap">
+     <header>
+    
+        <h1> The DINER </h1>
+        <div class="logo"><img src="img/content/logo.png" alt="Archie'Diner Logo"></div>
+        <nav>
+          <ul>
+            <li> <a href="home.html" class="active"> Home </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="aboutus.html"> About Us </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="menu.html"> Menu </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="bookings.html"> Bookings </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="contactus.html"> Contact Us </a> </li>
+          </ul>
+        </nav>
+        <div class="clear"></div>
+    </header>
+  </div> <!-- end header_wrap -->
+  
+  
+  <div id="body_wrap">
+    <div id="body">
+      
+      <div id="main">
+        <!--main content goes here-->
+       <div id="contest_game">
+        <div id="instructions">
+          <h1> Win a gift card contest! </h1>
+          <p> Test your luck and skill in our contest to win a gift card!  The rules are simple: Click on each canvas to cycle through 
+          our 6 items, and try to guess our currently most popular combo.  Pay attention to the hints given out and be quick!  New orders are constantly coming in, so the combo you guessed may no longer be the correct one if you take too long! </p>
+        </div>
+        <div id="timer">
+           <p> Time since first guess: <time id="time"> 00:00:00 </time>  </p> 
+        </div>
+        <div class="row">
+            <canvas class="active" id="canvas1_1" onclick=
+            "canvasClicked('1_1')"></canvas> <canvas class="active" id=
+            "canvas1_2" onclick="canvasClicked('1_2')"></canvas> <canvas class=
+            "active" id="canvas1_3" onclick="canvasClicked('1_3')"></canvas>
+            <canvas class="active" id="canvas1_4" onclick=
+            "canvasClicked('1_4')"></canvas> <label id="guess1">Guess 1</label>
+            <input id="submit1" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas2_1" onclick="canvasClicked('2_1')"></canvas>
+            <canvas id="canvas2_2" onclick="canvasClicked('2_2')"></canvas>
+            <canvas id="canvas2_3" onclick="canvasClicked('2_3')"></canvas>
+            <canvas id="canvas2_4" onclick="canvasClicked('2_4')"></canvas>
+            <label id="guess2">Guess 2</label>
+            <input id="submit2" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas3_1" onclick="canvasClicked('3_1')"></canvas>
+            <canvas id="canvas3_2" onclick="canvasClicked('3_2')"></canvas>
+            <canvas id="canvas3_3" onclick="canvasClicked('3_3')"></canvas>
+            <canvas id="canvas3_4" onclick="canvasClicked('3_4')"></canvas>
+            <label id="guess3">Guess 3</label>
+            <input id="submit3" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas4_1" onclick="canvasClicked('4_1')"></canvas>
+            <canvas id="canvas4_2" onclick="canvasClicked('4_2')"></canvas>
+            <canvas id="canvas4_3" onclick="canvasClicked('4_3')"></canvas>
+            <canvas id="canvas4_4" onclick="canvasClicked('4_4')"></canvas>
+            <label id="guess4">Guess 4</label>
+            <input id="submit4" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas5_1" onclick="canvasClicked('5_1')"></canvas>
+            <canvas id="canvas5_2" onclick="canvasClicked('5_2')"></canvas>
+            <canvas id="canvas5_3" onclick="canvasClicked('5_3')"></canvas>
+            <canvas id="canvas5_4" onclick="canvasClicked('5_4')"></canvas>
+            <label id="guess5">Guess 5</label>
+            <input id="submit5" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas6_1" onclick="canvasClicked('6_1')"></canvas>
+            <canvas id="canvas6_2" onclick="canvasClicked('6_2')"></canvas>
+            <canvas id="canvas6_3" onclick="canvasClicked('6_3')"></canvas>
+            <canvas id="canvas6_4" onclick="canvasClicked('6_4')"></canvas>
+            <label id="guess6">Guess 6</label>
+            <input id="submit6" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas7_1" onclick="canvasClicked('7_1')"></canvas>
+            <canvas id="canvas7_2" onclick="canvasClicked('7_2')"></canvas>
+            <canvas id="canvas7_3" onclick="canvasClicked('7_3')"></canvas>
+            <canvas id="canvas7_4" onclick="canvasClicked('7_4')"></canvas>
+            <label id="guess7">Guess 7</label>
+            <input id="submit7" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas8_1" onclick="canvasClicked('8_1')"></canvas>
+            <canvas id="canvas8_2" onclick="canvasClicked('8_2')"></canvas>
+            <canvas id="canvas8_3" onclick="canvasClicked('8_3')"></canvas>
+            <canvas id="canvas8_4" onclick="canvasClicked('8_4')"></canvas>
+            <label id="guess8">Guess 8</label>
+            <input id="submit8" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas9_1" onclick="canvasClicked('9_1')"></canvas>
+            <canvas id="canvas9_2" onclick="canvasClicked('9_2')"></canvas>
+            <canvas id="canvas9_3" onclick="canvasClicked('9_3')"></canvas>
+            <canvas id="canvas9_4" onclick="canvasClicked('9_4')"></canvas>
+            <label id="guess9">Guess 9</label>
+            <input id="submit9" onclick="verify()" type="button" value="Submit!">
+        </div>
+
+        <div class="row">
+            <canvas id="canvas10_1" onclick="canvasClicked('10_1')"></canvas>
+            <canvas id="canvas10_2" onclick="canvasClicked('10_2')"></canvas>
+            <canvas id="canvas10_3" onclick="canvasClicked('10_3')"></canvas>
+            <canvas id="canvas10_4" onclick="canvasClicked('10_4')"></canvas>
+            <label id="guess10">Guess 10</label>
+            <input id="submit10" onclick="verify()" type="button" value="Submit!">
+        </div>
+    </div><!-- end contest_game -->
+      </div>
+      <!-- end main -->
+      <div id="side_bar">
+    
+         <nav>
+          <ul>
+            <li> <a href="#"> <img src="img/content/fb.png" alt="Facebook"> /theDiner </a> </li>
+            <li> <a href="#"> <img src="img/content/tw.png" alt="Twitter"> @theDiner </a> </li>
+            <li> <a href="#"> <img src="img/content/rss.png" alt="RSS"> Subscribe RSS </a> </li>
+           </ul>
+         </nav>
+    
+      </div> <!-- end sside_bar -->
+    
+    <div class="clear"></div>
+    </div>
+    <!-- end body -->
+  </div> <!-- end body_wrap -->
+   
+  <div id="footer_wrap">
+    <footer>
+       <nav>
+          <ul>
+            <li> <a href="home.html" class="active"> Home </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="aboutus.html"> About Us </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="menu.html"> Menu </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="bookings.html"> Bookings </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="contactus.html"> Contact Us </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="careers.html"> Careers </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="contest.html"> Contest </a> </li>
+            <li> <span class="noLink">|</span> </li>
+            <li> <a href="sitemap.html" class="last"> Site Map </a> </li>
+          </ul>
+       </nav>
+        <div class="clear"></div>
+       <p> &#169; 2014 Kim & Raj, Contact Us. </p>
+    </footer>
+    <div class="clear"></div>
+  </div> <!-- end footer_wrap -->
+<script src="js/contest.js"> </script>
+</body>
+</html>
+
